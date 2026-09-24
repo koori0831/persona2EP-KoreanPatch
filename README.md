@@ -19,7 +19,7 @@ PSP용 **페르소나 2 벌(Persona 2: Eternal Punishment) 일본판**을 한국
 
 1. 정품에서 직접 추출한 **패치되지 않은 일본판 원본 ISO**를 준비하고, 원본과 세이브를 백업합니다.
 2. 위 릴리스에서 원본에 맞는 XDELTA를 내려받습니다. **1.1은 이전 내용을 포함한 누적 패치**이므로 1.0이 적용된 ISO에 덧씌우지 않습니다.
-3. GUI 도구인 **[Delta Patcher](https://github.com/marco-calautti/DeltaPatcher)**를 [공식 릴리스](https://github.com/marco-calautti/DeltaPatcher/releases/latest)에서 내려받아 실행합니다.
+3. GUI 도구인 [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher)를 [공식 릴리스](https://github.com/marco-calautti/DeltaPatcher/releases/latest)에서 내려받아 실행합니다.
 4. `Original file`에 원본 ISO의 복사본을, `XDelta patch`에 내려받은 `.xdelta`를 선택합니다. 옵션에서 `Backup original file`을 켜고 `Checksum validation`은 켜 둡니다.
 5. `Apply patch`를 눌러 적용합니다. 완료된 한글 ISO로 게임을 실행합니다.
 
