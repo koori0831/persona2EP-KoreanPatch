@@ -47,11 +47,9 @@ Get-FileHash -Algorithm SHA256 "원본.iso"
 
 </details>
 
-## 확인된 동작과 오류 제보
+## 오류 제보
 
-PPSSPP에서 게임 내 세이브를 불러와 제보된 구간을 확인했습니다. **PSP 및 Vita/Adrenaline 실기 실행은 미검증**이며 전체 스토리·모든 분기의 무오류를 보장하지 않습니다. 버전별 변경 사항과 확인 범위는 릴리스 패치노트를 참고하세요.
-
-문제를 발견하면 [Issues](https://github.com/koori0831/persona2EP-KoreanPatch/issues)에 패치 버전, UMD/PSN 구분, 실행 환경, 발생 위치와 재현 방법을 적어 주세요. 가능하면 오류 화면도 첨부해 주세요. 게임 원본 ISO는 첨부하지 마세요.
+문제를 발견하면 [Issues](https://github.com/koori0831/persona2EP-KoreanPatch/issues)에 패치 버전, UMD/PSN 구분, 실행 환경, 발생 위치와 재현 방법을 적어 주세요. 가능하면 오류 화면과 세이브 파일을 첨부해 주세요. 게임 원본 ISO는 첨부하지 마세요.
 
 ## 권리 및 면책 사항
 
