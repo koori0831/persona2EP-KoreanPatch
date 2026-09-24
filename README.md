@@ -1,1 +1,62 @@
-# persona2EP-KoreanPatch
+# 페르소나 2 벌 한글 패치
+
+PSP용 **페르소나 2 벌(Persona 2: Eternal Punishment) 일본판**을 한국어로 즐기기 위한 비공식 팬 번역 패치입니다. 게임 대사와 메뉴, 이미지 등에 한글화를 적용합니다.
+
+## 다운로드
+
+**[최신 패치 다운로드 · 패치노트](https://github.com/koori0831/persona2EP-KoreanPatch/releases/latest)**
+
+현재 버전은 **1.1**입니다. 릴리스의 **Assets**에서 보유한 원본에 맞는 `.xdelta` 파일 하나를 받으세요. `Source code` ZIP은 패치 파일이 아닙니다.
+
+| 보유한 원본 | 받을 파일 |
+|---|---|
+| 일본 UMD판 ISO (`ULJM06081`) | `Persona2EP-KoreanPatch-1.1-UMD.xdelta` |
+| Vita PSN판에서 추출·변환한 지원 ISO (`NPJH50581`) | `Persona2EP-KoreanPatch-1.1-Vita.xdelta` |
+
+게임 원본이나 패치가 적용된 ISO는 제공하지 않습니다. 직접 준비한 원본이 아래 SHA-256과 일치해야 합니다. PS1판이나 다른 지역판에는 사용할 수 없습니다.
+
+## 적용 방법
+
+1. 정품에서 직접 추출한 **패치되지 않은 일본판 원본 ISO**를 준비하고, 원본과 세이브를 백업합니다.
+2. 위 릴리스에서 원본에 맞는 XDELTA를 내려받습니다. **1.1은 이전 내용을 포함한 누적 패치**이므로 1.0이 적용된 ISO에 덧씌우지 않습니다.
+3. GUI 도구인 **[Delta Patcher](https://github.com/marco-calautti/DeltaPatcher)**를 [공식 릴리스](https://github.com/marco-calautti/DeltaPatcher/releases/latest)에서 내려받아 실행합니다.
+4. `Original file`에 원본 ISO의 복사본을, `XDelta patch`에 내려받은 `.xdelta`를 선택합니다. 옵션에서 `Backup original file`을 켜고 `Checksum validation`은 켜 둡니다.
+5. `Apply patch`를 눌러 적용합니다. 완료된 한글 ISO로 게임을 실행합니다.
+
+체크섬 오류가 나면 원본 종류와 SHA-256을 다시 확인하세요. 검사 옵션을 끄고 강제로 적용하지 마세요. Delta Patcher는 원본 보존 옵션을 끄면 입력 파일을 교체하므로, 반드시 복사본으로 작업하세요.
+
+PPSSPP에서는 새 ISO를 다시 시작하고 **게임 내 LOAD**로 저장 데이터를 불러오세요. 이전 버전의 상태 저장(`.ppst`)은 옛 실행 코드도 복원하므로 새 패치가 정상 반영되지 않을 수 있습니다.
+
+<details>
+<summary>지원 원본과 적용 후 ISO의 SHA-256 확인</summary>
+
+| 판 | 파일 | SHA-256 |
+|---|---|---|
+| UMD | 패치 전 원본 | `06785412b46eb67e5341a6b3171bd2e1a1ded1558904c8528e9f8ca71f400a45` |
+| UMD | 1.1 적용 후 | `a322b4e83ccb45e8ebc1a7644ceb56f506968e06d2b6fe313bd7cccb85c82101` |
+| Vita PSN | 패치 전 원본 | `0b3fcd9ea1b5cc671adbbbbb61dcc5903b46b241537545003ccb2f6ee0dbc5af` |
+| Vita PSN | 1.1 적용 후 | `c5503a993a0477127bf8ed21cc3f4cfe297f7f00f5c6e327eb5764fbf56aa1b9` |
+
+Vita PSN판은 추출·ISO 변환 방식에 따라 파일이 달라질 수 있습니다. 식별자나 파일명만 같아서는 적용할 수 없으며, 위 원본 해시와 일치하는 ISO를 사용해야 합니다.
+
+Windows PowerShell에서는 다음 명령으로 확인할 수 있습니다.
+
+```powershell
+Get-FileHash -Algorithm SHA256 "원본.iso"
+```
+
+</details>
+
+## 확인된 동작과 오류 제보
+
+PPSSPP에서 게임 내 세이브를 불러와 제보된 구간을 확인했습니다. **PSP 및 Vita/Adrenaline 실기 실행은 미검증**이며 전체 스토리·모든 분기의 무오류를 보장하지 않습니다. 버전별 변경 사항과 확인 범위는 릴리스 패치노트를 참고하세요.
+
+문제를 발견하면 [Issues](https://github.com/koori0831/persona2EP-KoreanPatch/issues)에 패치 버전, UMD/PSN 구분, 실행 환경, 발생 위치와 재현 방법을 적어 주세요. 가능하면 오류 화면도 첨부해 주세요. 게임 원본 ISO는 첨부하지 마세요.
+
+## 권리 및 면책 사항
+
+- 본 패치는 비영리 팬 활동으로 제작한 비공식 번역이며, 게임의 원저작권자·개발사·유통사와 관계가 없습니다. 게임에 관한 권리는 각 권리자에게 있습니다.
+- 정품을 보유한 이용자가 직접 준비한 원본에 개인적으로 적용하는 용도로 제공합니다. 게임 원본의 입수처나 다운로드는 제공하지 않습니다.
+- 패치 파일과 패치가 적용된 게임 파일의 재배포·판매 및 기타 상업적 이용을 금합니다. 공유할 때는 이 저장소 또는 릴리스 페이지의 링크를 이용해 주세요.
+- 패치는 있는 그대로 제공되며, 호환성·완전한 번역·무오류 동작을 보증하지 않습니다. 적용·사용에 따른 데이터 손실 등에 대비해 원본과 저장 데이터를 미리 백업해 주세요.
+- 권리자의 요청, 공식 재발매 등 사정에 따라 배포를 중단할 수 있습니다. 권리 관련 문의는 이 저장소의 Issues로 남겨 주세요.
