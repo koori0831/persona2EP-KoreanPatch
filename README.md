@@ -6,19 +6,21 @@ PSP용 **페르소나 2 벌(Persona 2: Eternal Punishment) 일본판**을 한국
 
 **[최신 패치 다운로드 · 패치노트](https://github.com/koori0831/persona2EP-KoreanPatch/releases/latest)**
 
-현재 버전은 **1.1**입니다. 릴리스의 **Assets**에서 보유한 원본에 맞는 `.xdelta` 파일 하나를 받으세요. `Source code` ZIP은 패치 파일이 아닙니다.
+현재 버전은 **1.2**입니다. 한글 자모 입력을 추가하고, 테케테케 격파 후 정지와 비밀 카지노 암호 인식 문제를 수정했습니다. 자세한 내용과 테스트 화면은 [1.2 패치노트](https://github.com/koori0831/persona2EP-KoreanPatch/releases/tag/1.2)를 참고하세요.
+
+릴리스의 **Assets**에서 보유한 원본에 맞는 `.xdelta` 파일 하나를 받으세요. `Source code` ZIP은 패치 파일이 아닙니다.
 
 | 보유한 원본 | 받을 파일 |
 |---|---|
-| 일본 UMD판 ISO (`ULJM06081`) | `Persona2EP-KoreanPatch-1.1-UMD.xdelta` |
-| Vita PSN판에서 추출·변환한 지원 ISO (`NPJH50581`) | `Persona2EP-KoreanPatch-1.1-Vita.xdelta` |
+| 일본 UMD판 ISO (`ULJM06081`) | `Persona2EP-KoreanPatch-1.2-UMD.xdelta` |
+| Vita PSN판에서 추출·변환한 지원 ISO (`NPJH50581`) | `Persona2EP-KoreanPatch-1.2-Vita.xdelta` |
 
 게임 원본이나 패치가 적용된 ISO는 제공하지 않습니다. 직접 준비한 원본이 아래 SHA-256과 일치해야 합니다. PS1판이나 다른 지역판에는 사용할 수 없습니다.
 
 ## 적용 방법
 
 1. 정품에서 직접 추출한 **패치되지 않은 일본판 원본 ISO**를 준비하고, 원본과 세이브를 백업합니다.
-2. 위 릴리스에서 원본에 맞는 XDELTA를 내려받습니다. **1.1은 이전 내용을 포함한 누적 패치**이므로 1.0이 적용된 ISO에 덧씌우지 않습니다.
+2. 위 릴리스에서 원본에 맞는 XDELTA를 내려받습니다. **1.2는 이전 내용을 포함한 누적 패치**이므로 기존 한글판 ISO에 덧씌우지 않습니다.
 3. GUI 도구인 [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher)를 [공식 릴리스](https://github.com/marco-calautti/DeltaPatcher/releases/latest)에서 내려받아 실행합니다.
 4. `Original file`에 원본 ISO의 복사본을, `XDelta patch`에 내려받은 `.xdelta`를 선택합니다. 옵션에서 `Backup original file`을 켜고 `Checksum validation`은 켜 둡니다.
 5. `Apply patch`를 눌러 적용합니다. 완료된 한글 ISO로 게임을 실행합니다.
@@ -28,14 +30,12 @@ PSP용 **페르소나 2 벌(Persona 2: Eternal Punishment) 일본판**을 한국
 PPSSPP에서는 새 ISO를 다시 시작하고 **게임 내 LOAD**로 저장 데이터를 불러오세요. 이전 버전의 상태 저장(`.ppst`)은 옛 실행 코드도 복원하므로 새 패치가 정상 반영되지 않을 수 있습니다.
 
 <details>
-<summary>지원 원본과 적용 후 ISO의 SHA-256 확인</summary>
+<summary>지원 원본의 SHA-256 확인</summary>
 
-| 판 | 파일 | SHA-256 |
-|---|---|---|
-| UMD | 패치 전 원본 | `06785412b46eb67e5341a6b3171bd2e1a1ded1558904c8528e9f8ca71f400a45` |
-| UMD | 1.1 적용 후 | `a322b4e83ccb45e8ebc1a7644ceb56f506968e06d2b6fe313bd7cccb85c82101` |
-| Vita PSN | 패치 전 원본 | `0b3fcd9ea1b5cc671adbbbbb61dcc5903b46b241537545003ccb2f6ee0dbc5af` |
-| Vita PSN | 1.1 적용 후 | `c5503a993a0477127bf8ed21cc3f4cfe297f7f00f5c6e327eb5764fbf56aa1b9` |
+| 판 | 패치 전 원본 ISO의 SHA-256 |
+|---|---|
+| UMD | `06785412b46eb67e5341a6b3171bd2e1a1ded1558904c8528e9f8ca71f400a45` |
+| Vita PSN | `0b3fcd9ea1b5cc671adbbbbb61dcc5903b46b241537545003ccb2f6ee0dbc5af` |
 
 Vita PSN판은 추출·ISO 변환 방식에 따라 파일이 달라질 수 있습니다. 식별자나 파일명만 같아서는 적용할 수 없으며, 위 원본 해시와 일치하는 ISO를 사용해야 합니다.
 
@@ -45,7 +45,23 @@ Windows PowerShell에서는 다음 명령으로 확인할 수 있습니다.
 Get-FileHash -Algorithm SHA256 "원본.iso"
 ```
 
+배포 패치와 적용 후 ISO의 해시는 릴리스에 첨부한 `SHA256SUMS.txt`에서 확인할 수 있습니다.
+
 </details>
+
+## 한글 입력
+
+이름·암호 입력창에서 화면의 자음과 모음을 순서대로 선택하면 한글이 조합됩니다. **자모 40자와 완성형 한글 2,350자**를 지원하며, 공백을 포함해 최대 **8칸**까지 입력할 수 있습니다.
+
+| 조작 | 기능 |
+|---|---|
+| 방향키 · ○ | 화면의 글자 선택 · 입력 |
+| □ | 공백 입력 |
+| L / R | 한글·영문 페이지 전환 |
+| × | 현재 칸의 글자 전체 삭제 |
+| START | 입력 확정 |
+
+예를 들어 `혼다 료이치`는 `ㅎㅗㄴㄷㅏ` → □ → `ㄹㅛㅇㅣㅊㅣ` 순서로 입력합니다. ×는 자모 하나씩 되돌리는 방식이 아닙니다.
 
 ## 오류 제보
 
